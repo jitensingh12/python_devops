@@ -1,5 +1,6 @@
 
 # This is dynamic code just edit function name and action command on ec2 basis and will work as per your need.
+# edit tags as per your need.
 
 def stop_instances():
     ec2 = boto3.client('ec2')
