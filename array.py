@@ -1,8 +1,8 @@
 
 
-### Question : find array length then find max number which will less than array length -- 
+### Question : find array length then find "MAX NUMBER" which will less than "ARRAY LENGTH"  -- 
 
-def find_max_elements(array):
+def find_elements(array):
     leng = len(array)
     #print(leng)
     arr = []
@@ -22,6 +22,6 @@ def find_max_elements(array):
     return(value)
 if __name__ == '__main__':
     array = [10,2,3,5,5,4,6,7]
-    result = find_max_elements(array)
+    result = find_elements(array)
     print(str(result) + '\n')
     #fptr.close()
