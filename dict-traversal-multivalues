@@ -1,1 +1,23 @@
+# We need to print some dictionary API result which has values in list of string so need to print all as list. 
+# As below a key has list of string values so need to print all a,b,c values as list.
+#this is completely dynamic code.
+
+
+my_dict = {
+    'a': [1, 2],
+    'b': [3, 4],
+    'c': [5, 6]
+}
+x = list(my_dict.values()) # converting all values in one single list
+
+print(x)
+sample: list[int] = [] # this need to declared to print output as list
+for value_list in x:
+    #print(value_list)
+    #sample: list[int] = []  // will not print output in a list
+    for item in value_list:
+        #print(item)
+        sample.append(item)
+
+print(sample)
 
