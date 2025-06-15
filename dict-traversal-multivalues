@@ -1,7 +1,21 @@
-# We need to print some dictionary API result which has values in list of string so need to print all as list. 
+# We need to print some dictionary API result which has keys and values data as list of string so need to print all as list. 
 # As below a key has list of string values so need to print all a,b,c values as list.
-#this is completely dynamic code.
+#this is completely dynamic code. this example has 2 ways --> 1st for intermediate and 2nd for expert -- anyone can you opt
 
+#1st Way
+
+from itertools import chain
+my_dict = {
+    'a': [1, 2],
+    'b': [3, 4],
+    'c': [5, 6]
+}
+
+sample: list[int] = list(chain.from_iterable(my_dict.values()))
+print(sample)  # [1, 2, 3, 4, 5, 6] output is like that.
+
+===================================================================
+#2nd Way:
 
 my_dict = {
     'a': [1, 2],
@@ -9,15 +23,10 @@ my_dict = {
     'c': [5, 6]
 }
 x = list(my_dict.values()) # converting all values in one single list
-
 print(x)
 sample: list[int] = [] # this need to declared to print output as list
 for value_list in x:
-    #print(value_list)
-    #sample: list[int] = []  // will not print output in a list
     for item in value_list:
-        #print(item)
         sample.append(item)
-
 print(sample)
 
